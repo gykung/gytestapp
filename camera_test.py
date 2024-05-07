@@ -2,7 +2,7 @@
 """
 Created on Sat May  4 19:01:22 2024
 
-@author: kgua
+@author: k
 """
 
 import streamlit as st
