@@ -33,6 +33,7 @@ if img_file_buffer is not None:
 # if img_file_buffer:
     print('here')
     # To read image file buffer as bytes:
+    st.image(img_file_buffer, caption="Uploaded Image", use_column_width=True)
     bytes_data = img_file_buffer .getvalue()
     
     # Convert bytes data to base64
