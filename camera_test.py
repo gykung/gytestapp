@@ -13,7 +13,7 @@ import requests
 
 # OpenAI API Key
 api_key = st.text_input("API Key")
-
+st.write_stream('hello')
 title = st.text_input("Your prompt:","This is a refinery worker. Are there dangers, work hazards, PPE mistakes or behavioral issues?")
 
 
