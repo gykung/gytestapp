@@ -63,8 +63,6 @@ if img_file_buffer is not None:
 
     st.text(response.json())
     st.text(response.json()['choices'][0]['message']['content'])
-# #  python -m streamlit run "C:\Users\kgua\OneDrive - SINGAPORE REFINING COMPANY\data\openai\camera_test.py"
-
 
 
 
