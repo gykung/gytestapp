@@ -15,7 +15,7 @@ import requests
 # OpenAI API Key
 api_key = st.text_input("API Key")
 
-title = st.text_input("Your prompt:","This is a refinery worker. Are there dangers, work hazards, PPE mistakes or behavioral issues? Are the gloves, helmet, 4-in-1 meter, long sleeve uniform, boots, worn properly?")
+title = st.text_input("Your prompt:","This is a refinery worker. Are there dangers, work hazards, PPE mistakes or behavioral issues? Are the gloves, helmet, 4-in-1 meter, long sleeve uniform, boots, worn properly? Please give a one line answer highlighting the offences.")
 
 
 #img_file_buffer  = st.camera_input("Take a picture")
