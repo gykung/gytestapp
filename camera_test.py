@@ -13,26 +13,19 @@ import requests
 
 # OpenAI API Key
 api_key = st.text_input("API Key")
-st.write_stream('hello')
+
 title = st.text_input("Your prompt:","This is a refinery worker. Are there dangers, work hazards, PPE mistakes or behavioral issues?")
 
 
 #img_file_buffer  = st.camera_input("Take a picture")
 img_file_buffer = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
-def stream_data():
-    for word in _LOREM_IPSUM.split(" "):
+def response_generator(response):
+    
+    for word in response.split():
         yield word + " "
-        time.sleep(0.02)
+        time.sleep(0.05)
 
-    yield pd.DataFrame(
-        np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    )
-
-    for word in _LOREM_IPSUM.split(" "):
-        yield word + " "
-        time.sleep(0.02)
 
 print('here 1')
 if img_file_buffer is not None:
@@ -77,7 +70,7 @@ if img_file_buffer is not None:
 
     #st.text(response.json())
     #st.code(response.json()['choices'][0]['message']['content'])
-    st.write_stream(response.json()['choices'][0]['message']['content'])
+    st.write_stream(response_generator(response.json()['choices'][0]['message']['content']))
 
 
 
