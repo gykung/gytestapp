@@ -12,7 +12,7 @@ import base64
 import requests
 
 # OpenAI API Key
-api_key = "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"
+api_key = st.text_input("API Key")
 
 title = st.text_input("Your prompt:","Can you tell the gender, region?")
 
