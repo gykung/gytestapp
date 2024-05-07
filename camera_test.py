@@ -14,10 +14,11 @@ import requests
 # OpenAI API Key
 api_key = st.text_input("API Key")
 
-title = st.text_input("Your prompt:","Can you tell the gender, region?")
+title = st.text_input("Your prompt:","This is a refinery worker. Are there dangers, work hazards, PPE mistakes or behavioral issues?")
 
 
-img_file_buffer  = st.camera_input("Take a picture")
+#img_file_buffer  = st.camera_input("Take a picture")
+img_file_buffer = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 
 print('here 1')
