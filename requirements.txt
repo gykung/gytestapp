@@ -1,4 +1,4 @@
-pandas==1.5.2
-qrcode==7.4.2
-reportlab==4.2.2
-streamlit==1.22.0
+pandas
+qrcode
+reportlab
+streamlit
